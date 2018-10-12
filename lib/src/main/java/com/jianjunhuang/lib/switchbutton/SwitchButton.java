@@ -42,7 +42,7 @@ public class SwitchButton extends AppCompatTextView implements Animator.Animator
   private Paint mBorderPaint;
   private Paint mBgPaint;
   private Paint mAnimatePaint;
-  @Status
+  @SwitchButtonStatus
   private int mStatus;
 
   private int mInvalidTextColor = INVALID_TEXT_COLOR;
@@ -253,7 +253,7 @@ public class SwitchButton extends AppCompatTextView implements Animator.Animator
     this.mBorderWidth = mBorderWidth;
   }
 
-  public void switchStatus(@Status int status) {
+  public void switchStatus(@SwitchButtonStatus int status) {
     switchStatus(status, false);
   }
 
@@ -273,7 +273,7 @@ public class SwitchButton extends AppCompatTextView implements Animator.Animator
     this.mAnimateDuration = mAnimateDuration;
   }
 
-  public void switchStatus(@Status int status, boolean animate) {
+  public void switchStatus(@SwitchButtonStatus int status, boolean animate) {
 
     this.mStatus = status;
     if (animate) {
@@ -281,13 +281,13 @@ public class SwitchButton extends AppCompatTextView implements Animator.Animator
         mAnimator.cancel();
       }
       switch (mStatus) {
-        case Status.CHECKED:
+        case SwitchButtonStatus.CHECKED:
           mAnimatePaint.setColor(mCheckedBgColor);
           break;
-        case Status.INVALID:
+        case SwitchButtonStatus.INVALID:
           mAnimatePaint.setColor(mInvalidBgColor);
           break;
-        case Status.DEFAULT:
+        case SwitchButtonStatus.DEFAULT:
           mAnimatePaint.setColor(mDefaultBgColor);
           break;
       }
@@ -311,17 +311,17 @@ public class SwitchButton extends AppCompatTextView implements Animator.Animator
 
   private void changeStyle() {
     switch (mStatus) {
-      case Status.CHECKED:
+      case SwitchButtonStatus.CHECKED:
         mBgPaint.setColor(mCheckedBgColor);
         mBorderPaint.setColor(mCheckedBorderColor);
         setTextColor(mCheckedTextColor);
         break;
-      case Status.INVALID:
+      case SwitchButtonStatus.INVALID:
         mBgPaint.setColor(mInvalidBgColor);
         mBorderPaint.setColor(mInvalidBorderColor);
         setTextColor(mInvalidTextColor);
         break;
-      case Status.DEFAULT:
+      case SwitchButtonStatus.DEFAULT:
         mBgPaint.setColor(mDefaultBgColor);
         mBorderPaint.setColor(mDefaultBorderColor);
         setTextColor(mDefaultTextColor);

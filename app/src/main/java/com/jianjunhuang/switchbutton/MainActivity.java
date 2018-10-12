@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import com.jianjunhuang.lib.switchbutton.Status;
+import com.jianjunhuang.lib.switchbutton.SwitchButtonStatus;
 import com.jianjunhuang.lib.switchbutton.SwitchButton;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,18 +19,17 @@ public class MainActivity extends AppCompatActivity {
     switchButton.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
-        Toast.makeText(MainActivity.this,""+index,Toast.LENGTH_SHORT).show();
         switch (index) {
           case 0:
-            switchButton.switchStatus(Status.INVALID,true);
+            switchButton.switchStatus(SwitchButtonStatus.INVALID, true);
             index = 1;
             break;
           case 1:
-            switchButton.switchStatus(Status.DEFAULT,true);
+            switchButton.switchStatus(SwitchButtonStatus.DEFAULT, true);
             index = 3;
             break;
           case 3:
-            switchButton.switchStatus(Status.CHECKED,true);
+            switchButton.switchStatus(SwitchButtonStatus.CHECKED, true);
             index = 0;
             break;
         }

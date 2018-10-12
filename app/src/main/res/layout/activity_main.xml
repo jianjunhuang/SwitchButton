@@ -13,7 +13,6 @@
     android:layout_height="112dp"
     android:gravity="center"
     android:text="Hello World!"
-    app:borderWidth="1dp"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintLeft_toLeftOf="parent"
     app:layout_constraintRight_toRightOf="parent"

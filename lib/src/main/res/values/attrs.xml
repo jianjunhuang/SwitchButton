@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <declare-styleable name="switchButton">
+  <declare-styleable name="SwitchButton">
     <attr name="invalidTextColor" format="color"/>
     <attr name="invalidBorderColor" format="color"/>
     <attr name="invalidBackgroundColor" format="color"/>

@@ -79,36 +79,36 @@ public class SwitchButton extends AppCompatTextView implements Animator.Animator
   public SwitchButton(Context context, AttributeSet attrs, int defStyleAttr) {
     super(context, attrs, defStyleAttr);
 
-    TypedArray typedArray = getResources().obtainAttributes(attrs, R.styleable.switchButton);
+    TypedArray typedArray = getResources().obtainAttributes(attrs, R.styleable.SwitchButton);
 
     if (typedArray != null) {
       mInvalidTextColor =
-          typedArray.getColor(R.styleable.switchButton_invalidTextColor, INVALID_TEXT_COLOR);
+          typedArray.getColor(R.styleable.SwitchButton_invalidTextColor, INVALID_TEXT_COLOR);
       mInvalidBorderColor =
-          typedArray.getColor(R.styleable.switchButton_invalidBorderColor, INVALID_BORDER_COLOR);
+          typedArray.getColor(R.styleable.SwitchButton_invalidBorderColor, INVALID_BORDER_COLOR);
       mInvalidBgColor =
-          typedArray.getColor(R.styleable.switchButton_invalidBackgroundColor, DEFAULT_BG_COLOR);
+          typedArray.getColor(R.styleable.SwitchButton_invalidBackgroundColor, DEFAULT_BG_COLOR);
 
       mDefaultTextColor =
-          typedArray.getColor(R.styleable.switchButton_defaultTextColor, DEFAULT_TEXT_COLOR);
+          typedArray.getColor(R.styleable.SwitchButton_defaultTextColor, DEFAULT_TEXT_COLOR);
       mDefaultBorderColor =
-          typedArray.getColor(R.styleable.switchButton_defaultBorderColor, DEFAULT_BORDER_COLOR);
+          typedArray.getColor(R.styleable.SwitchButton_defaultBorderColor, DEFAULT_BORDER_COLOR);
       mDefaultBgColor =
-          typedArray.getColor(R.styleable.switchButton_defaultBackgroundColor, DEFAULT_BG_COLOR);
+          typedArray.getColor(R.styleable.SwitchButton_defaultBackgroundColor, DEFAULT_BG_COLOR);
 
       mCheckedTextColor =
-          typedArray.getColor(R.styleable.switchButton_checkedTextColor, CHECKED_TEXT_COLOR);
+          typedArray.getColor(R.styleable.SwitchButton_checkedTextColor, CHECKED_TEXT_COLOR);
       mCheckedBorderColor =
-          typedArray.getColor(R.styleable.switchButton_checkedBorderColor, CHECKED_BORDER_COLOR);
+          typedArray.getColor(R.styleable.SwitchButton_checkedBorderColor, CHECKED_BORDER_COLOR);
       mCheckedBgColor =
-          typedArray.getColor(R.styleable.switchButton_checkedBackgroundColor, CHECKED_BG_COLOR);
+          typedArray.getColor(R.styleable.SwitchButton_checkedBackgroundColor, CHECKED_BG_COLOR);
 
       mBorderRadius =
-          typedArray.getDimensionPixelSize(R.styleable.switchButton_radius, DEFAULT_RADIUS);
-      mBorderWidth = typedArray.getDimensionPixelSize(R.styleable.switchButton_borderWidth,
+          typedArray.getDimensionPixelSize(R.styleable.SwitchButton_radius, DEFAULT_RADIUS);
+      mBorderWidth = typedArray.getDimensionPixelSize(R.styleable.SwitchButton_borderWidth,
                                                       DEFAULT_BORDER_WIDTH);
       mAnimateDuration =
-          typedArray.getInt(R.styleable.switchButton_animateDuration, DEFAULT_ANIMATE_DURATION);
+          typedArray.getInt(R.styleable.SwitchButton_animateDuration, DEFAULT_ANIMATE_DURATION);
       typedArray.recycle();
     }
 

@@ -140,7 +140,7 @@ public class SwitchButton extends AppCompatTextView implements Animator.Animator
   }
 
   private float getLen() {
-    return (float) Math.sqrt((getHeight() * getHeight() + getRight() * getRight()));
+    return (float) Math.sqrt((getHeight() * getHeight() + getRight() * getRight()))+10;
   }
 
   @Override

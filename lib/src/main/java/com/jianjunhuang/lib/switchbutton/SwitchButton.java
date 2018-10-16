@@ -293,7 +293,6 @@ public class SwitchButton extends AppCompatTextView implements Animator.Animator
       }
       mAnimator.start();
     } else {
-      mBgPaint.setShader(null);
       changeStyle();
     }
   }
@@ -311,6 +310,7 @@ public class SwitchButton extends AppCompatTextView implements Animator.Animator
   }
 
   private void changeStyle() {
+    mBgPaint.setShader(null);
     switch (mStatus) {
       case SwitchButtonStatus.CHECKED:
         mBgPaint.setColor(mCheckedBgColor);

@@ -21,15 +21,15 @@ public class SwitchButton extends AppCompatTextView implements Animator.Animator
 
   public static int INVALID_TEXT_COLOR = 0xffc4c8dc;
   public static int INVALID_BORDER_COLOR = 0xffc4c8dc;
-  public static int INVALID_GB_COLOR = 0xFFF7F9F7;
+  public static int INVALID_GB_COLOR = 0xfff0f0f0;
 
-  public static int DEFAULT_TEXT_COLOR = 0xff606993;
-  public static int DEFAULT_BORDER_COLOR = 0xff606993;
-  public static int DEFAULT_BG_COLOR = Color.WHITE;
+  public static int DEFAULT_TEXT_COLOR = Color.WHITE;
+  public static int DEFAULT_BORDER_COLOR = 0xff303F9F;
+  public static int DEFAULT_BG_COLOR = 0xff3F51B5;
 
   public static int CHECKED_TEXT_COLOR = Color.WHITE;
-  public static int CHECKED_BORDER_COLOR = 0xffff9100;
-  public static int CHECKED_BG_COLOR = 0xffff9100;
+  public static int CHECKED_BORDER_COLOR = 0xffFF4081;
+  public static int CHECKED_BG_COLOR = 0xffFF4081;
 
   @Px
   public static int DEFAULT_BORDER_WIDTH = 2;

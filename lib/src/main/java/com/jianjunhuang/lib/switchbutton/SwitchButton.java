@@ -19,16 +19,16 @@ import android.view.animation.AccelerateInterpolator;
 
 public class SwitchButton extends AppCompatTextView implements Animator.AnimatorListener {
 
-  public static int INVALID_TEXT_COLOR = Color.parseColor("#c4c8dc");
-  public static int INVALID_BORDER_COLOR = Color.parseColor("#c4c8dc");
+  public static int INVALID_TEXT_COLOR = 0xffc4c8dc;
+  public static int INVALID_BORDER_COLOR = 0xffc4c8dc;
 
-  public static int DEFAULT_TEXT_COLOR = Color.parseColor("#606993");
-  public static int DEFAULT_BORDER_COLOR = Color.parseColor("#606993");
+  public static int DEFAULT_TEXT_COLOR = 0xff606993;
+  public static int DEFAULT_BORDER_COLOR = 0xff606993;
   public static int DEFAULT_BG_COLOR = Color.WHITE;
 
   public static int CHECKED_TEXT_COLOR = Color.WHITE;
-  public static int CHECKED_BORDER_COLOR = Color.parseColor("#ff9100");
-  public static int CHECKED_BG_COLOR = Color.parseColor("#ff9100");
+  public static int CHECKED_BORDER_COLOR = 0xffff9100;
+  public static int CHECKED_BG_COLOR = 0xffff9100;
 
   @Px
   public static int DEFAULT_BORDER_WIDTH = 2;
@@ -140,7 +140,7 @@ public class SwitchButton extends AppCompatTextView implements Animator.Animator
   }
 
   private float getLen() {
-    return (float) Math.sqrt((getHeight() * getHeight() + getRight() * getRight()))+10;
+    return (float) Math.sqrt((getHeight() * getHeight() + getRight() * getRight())) + 10;
   }
 
   @Override

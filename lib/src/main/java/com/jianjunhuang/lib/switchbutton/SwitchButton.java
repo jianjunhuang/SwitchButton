@@ -21,6 +21,7 @@ public class SwitchButton extends AppCompatTextView implements Animator.Animator
 
   public static int INVALID_TEXT_COLOR = 0xffc4c8dc;
   public static int INVALID_BORDER_COLOR = 0xffc4c8dc;
+  public static int INVALID_GB_COLOR = 0xFFF7F9F7;
 
   public static int DEFAULT_TEXT_COLOR = 0xff606993;
   public static int DEFAULT_BORDER_COLOR = 0xff606993;
@@ -65,7 +66,6 @@ public class SwitchButton extends AppCompatTextView implements Animator.Animator
   private float animateRadius;
   private ObjectAnimator mAnimator = ObjectAnimator.ofFloat(this, "animateRadius", 0);
 
-
   public SwitchButton(Context context) {
     this(context, null);
   }
@@ -87,7 +87,7 @@ public class SwitchButton extends AppCompatTextView implements Animator.Animator
       mInvalidBorderColor =
           typedArray.getColor(R.styleable.SwitchButton_invalidBorderColor, INVALID_BORDER_COLOR);
       mInvalidBgColor =
-          typedArray.getColor(R.styleable.SwitchButton_invalidBackgroundColor, DEFAULT_BG_COLOR);
+          typedArray.getColor(R.styleable.SwitchButton_invalidBackgroundColor, INVALID_GB_COLOR);
 
       mDefaultTextColor =
           typedArray.getColor(R.styleable.SwitchButton_defaultTextColor, DEFAULT_TEXT_COLOR);
@@ -305,6 +305,7 @@ public class SwitchButton extends AppCompatTextView implements Animator.Animator
   private void createCircleShader() {
     Bitmap bitmap = Bitmap.createBitmap(getWidth(), getHeight(), Bitmap.Config.ARGB_8888);
     Canvas canvas = new Canvas(bitmap);
+    canvas.drawColor(mBgPaint.getColor());
     canvas.drawCircle(preX, preY, animateRadius, mAnimatePaint);
     mBgPaint.setShader(new BitmapShader(bitmap, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP));
   }
@@ -349,5 +350,13 @@ public class SwitchButton extends AppCompatTextView implements Animator.Animator
   @Override
   public void onAnimationRepeat(Animator animation) {
 
+  }
+
+  @Override
+  protected void onDetachedFromWindow() {
+    super.onDetachedFromWindow();
+    if (mAnimator != null && mAnimator.isRunning()) {
+      mAnimator.cancel();
+    }
   }
 }

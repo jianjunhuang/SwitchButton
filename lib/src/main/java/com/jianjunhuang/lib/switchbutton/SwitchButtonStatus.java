@@ -1,6 +1,7 @@
 package com.jianjunhuang.lib.switchbutton;
 
-import android.annotation.IntDef;
+
+import android.support.annotation.IntDef;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
